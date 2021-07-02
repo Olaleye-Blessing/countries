@@ -1,0 +1,13 @@
+.width {
+    max-width: 120rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.box {
+    background-color: var(--box-bg);
+    border-radius: var(--border-rad);
+    padding: 0.5rem 1rem;
+}

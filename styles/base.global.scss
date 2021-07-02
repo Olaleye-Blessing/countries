@@ -1,0 +1,155 @@
+:root {
+    --bgColor: hsl(207, 26%, 17%);
+    --color: hsl(0, 0%, 100%);
+    --element: hsl(209, 23%, 22%);
+    --secondary-color: #4a8c7f;
+    --secondary-color-2: #009879;
+
+    --gray: #a4a1a1cd;
+
+    --box-bg: hsl(209, 23%, 22%);
+
+    --border-rad: 0.8rem;
+}
+
+[data-theme="light"] {
+    --bgColor: hsl(0, 0%, 98%);
+    --color: hsl(200, 15%, 8%);
+    --element: hsl(0, 0%, 100%);
+    --element: #e8e8e8;
+
+    --box-bg: #dcdcdc;
+}
+:root.white-mode {
+    --bgColor: hsl(0, 0%, 98%);
+    --color: hsl(200, 15%, 8%);
+    --element: hsl(0, 0%, 100%);
+    --input: hsl(0, 0%, 52%);
+    --scroll-bg: hsl(209, 23%, 22%);
+    --thumb-bg: hsl(0, 0%, 52%);
+}
+
+@import "./mixins";
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    background-color: var(--bgColor);
+    color: var(--color);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    transition: color 0.2s linear, background 0.2s linear;
+}
+
+button {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn {
+    transition: all 0.2s linear;
+    &__link {
+        color: var(--secondary-color-2);
+
+        &:hover {
+            color: var(--color);
+        }
+    }
+}
+
+.home {
+    font-size: 4rem;
+    @include flex(row, flex-start);
+    color: var(--color);
+
+    &__icon {
+        @include flex(row, center);
+        color: var(--bgColor);
+        color: var(--secondary-color);
+        font-size: 3.7rem;
+    }
+}
+
+.toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: var(--color);
+    @include flex();
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    border-radius: var(--border-rad);
+    padding: 0.5rem;
+}
+
+footer {
+    @include flex(row, space-between);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    & > * {
+        margin-top: 2.5rem;
+    }
+}
+
+.footer {
+    &__social {
+        @include flex(row, flex-start);
+        & > a {
+            color: var(--color);
+            @include flex();
+            font-size: 2.5rem;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+
+        &-github {
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+        &-twitter {
+            &:hover {
+                color: #1da1f2;
+            }
+        }
+        &-linkedin {
+            &:hover {
+                color: #0e76a8;
+            }
+        }
+    }
+}

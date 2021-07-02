@@ -1,0 +1,84 @@
+@import "./../../styles/mixins";
+
+.table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    margin: 2.5rem auto;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+
+    th,
+    td {
+        padding: 1.2rem 1.5rem;
+    }
+    th {
+        padding-top: 2.3rem;
+        padding-bottom: 2.3rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+    td {
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+
+    &__icon {
+        @include flex();
+        display: inline-flex;
+
+        &-up {
+            color: green;
+        }
+
+        &-down {
+            color: red;
+        }
+    }
+}
+
+.thead {
+    tr {
+        // background-color: var(--secondary-color);
+        // background-color: #4c4f4e;
+        color: var(--color);
+        font-weight: bold;
+    }
+    th {
+        div {
+            @include flex();
+            margin-right: auto;
+            margin-left: auto;
+            flex-wrap: nowrap;
+        }
+        &:nth-child(1) {
+            width: 30%;
+        }
+        &:nth-child(2) {
+            width: 18%;
+        }
+        &:nth-child(3) {
+            width: 28%;
+        }
+        &:nth-child(4) {
+            width: 24%;
+        }
+    }
+}
+
+.tbody {
+    & tr {
+        transition: all 0.2s linear;
+        &:nth-child(odd) {
+            background-color: var(--element);
+        }
+        &:last-of-type {
+            // border-bottom: 2px solid #009879;
+        }
+    }
+}

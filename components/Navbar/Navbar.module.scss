@@ -1,0 +1,8 @@
+@import "./../../styles/mixins";
+
+.nav {
+    // background-color: var(--secondary-color);
+    @include flex(row, space-between);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}

@@ -1,0 +1,108 @@
+@import "./../../styles/mixins";
+
+.country {
+    @include flex(row, center);
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    & > * {
+        flex: 1 1 40rem;
+    }
+
+    &__sub {
+        padding: 0.8rem 0.9rem;
+        max-width: 30rem;
+
+        & > * {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__flag {
+        width: 100%;
+        // max-width: 20rem;
+        // background-color: green;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__name,
+    &__region {
+        text-align: center;
+    }
+
+    &__region {
+        font-size: 1.7rem;
+        margin-top: -0.3rem;
+        color: var(--gray);
+    }
+
+    &__density {
+        @include flex(row, center);
+    }
+
+    &__population,
+    &__area {
+        text-align: center;
+        // display: flex;
+        // flex-flow: column wrap;
+        // align-items: center;
+        // justify-content: center;
+        @include flex(column, center);
+    }
+
+    &__population {
+        margin-right: 3rem;
+    }
+
+    &__main {
+        flex: 1 1 40rem;
+        padding: 0;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        // min-width: 40rem;
+        h3 {
+            font-size: 1.9rem;
+            margin-bottom: 0.6rem;
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+        }
+
+        & > *:not(:last-child) {
+            @include flex(row, space-between);
+            border-bottom: 0.1rem solid var(--bgColor);
+            padding: 1rem 0.9rem 1.2rem;
+        }
+    }
+
+    &__borders {
+        margin-top: 1rem;
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+
+        h4 {
+            margin-bottom: 1.5rem;
+        }
+
+        & > div {
+            @include flex(row, space-around);
+            gap: 2rem;
+
+            & > * {
+                flex: 1 1 7rem;
+                max-width: 10rem;
+            }
+        }
+
+        &-link {
+            color: var(--secondary-color-2);
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}

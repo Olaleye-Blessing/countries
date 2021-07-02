@@ -1,0 +1,50 @@
+@import "./../../styles/mixins";
+
+.form {
+    &__cont {
+        // background-color: red;
+        @include flex(row, space-between);
+        flex-wrap: wrap;
+    }
+
+    &__result {
+        font-size: 2rem;
+    }
+
+    &__form {
+        flex: 1;
+        max-width: 40rem;
+        margin-left: 4rem;
+    }
+
+    &__divCont {
+        @include flex(row, center);
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        color: var(--color);
+        z-index: 99;
+        padding: 1.1rem 0.7rem 0.3rem 0.7rem;
+        background-color: var(--secondary-color-2);
+        font-size: 1.5rem;
+        border-top-left-radius: var(--border-rad);
+        border-bottom-left-radius: var(--border-rad);
+    }
+
+    &__input {
+        padding: 1rem 1rem 1rem 3.3rem;
+        // color: var(--secondary-color);
+        color: var(--color);
+        // background-color: var(--color);
+        background-color: var(--gray);
+
+        &::placeholder {
+            color: var(--color);
+        }
+    }
+}
