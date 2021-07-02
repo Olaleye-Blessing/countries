@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Table from "../components/Table/Table.jsx";
-// import { useGlobalContext } from "../context/globalContext.jsx";
-// import { ACTIONS } from "../reducer/action.js";
 import Form from "./../components/Form/Form";
 
 export const getStaticProps = async () => {
@@ -20,13 +18,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ countries }) {
-    // let { dispatch } = useGlobalContext();
-
-    // useEffect(() => {
-    //     dispatch({ type: ACTIONS.GOT_COUNTRIES, payload: countries });
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
-
     const [countrySearch, setCountrySearch] = useState("");
     let tableHeadRows = [
         { label: "name", sortable: true },
