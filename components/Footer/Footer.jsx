@@ -21,7 +21,10 @@ const Footer = () => {
     ];
     return (
         <footer className="width">
-            <div>&copy; Olaleye Blessing</div>
+            <div>
+                <span className="footer__copy">&copy;</span>{" "}
+                <span className="footer__name">Olaleye Blessing</span>
+            </div>
             <div className="footer__social">
                 {socialIcons.map((social, i) => (
                     <a

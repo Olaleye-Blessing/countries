@@ -140,6 +140,13 @@ footer {
 }
 
 .footer {
+    &__copy {
+        font-size: 2rem;
+    }
+    &__name {
+        font-size: 3rem;
+        color: var(--gray);
+    }
     &__social {
         @include flex(row, flex-start);
         & > a {

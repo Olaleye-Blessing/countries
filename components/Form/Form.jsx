@@ -11,7 +11,10 @@ const Form = ({ onSearch, countriesLength }) => {
             <p className={`${formStyle.form__result}`}>
                 {countriesLength} results
             </p>
-            <form className={`${formStyle.form__form}`}>
+            <form
+                className={`${formStyle.form__form}`}
+                onSubmit={(e) => e.preventDefault()}
+            >
                 <div className={`${formStyle.form__divCont}`}>
                     <span className={`${formStyle.form__icon} `}>
                         <FiSearch />
