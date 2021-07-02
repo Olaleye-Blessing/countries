@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Basic&family=Trirong:wght@700&display=swap");
+
 :root {
     --bgColor: hsl(207, 26%, 17%);
     --color: hsl(0, 0%, 100%);
@@ -10,6 +12,9 @@
     --box-bg: hsl(209, 23%, 22%);
 
     --border-rad: 0.8rem;
+
+    --body-font: "Gentium Basic", serif;
+    --head-font: "Trirong", serif;
 }
 
 [data-theme="light"] {
@@ -52,6 +57,16 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     transition: color 0.2s linear, background 0.2s linear;
+    font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--head-font);
 }
 
 button {
