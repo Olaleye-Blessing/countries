@@ -1,9 +1,10 @@
 # Search For Countries Basic Information
 
 This project is mainly based on searching for countries' information.
+
 It's created with nextjs.
 
-## How I worked on this project
+## Why I worked on this project
 
 My goal was to learn how nextjs works.
 
@@ -16,11 +17,14 @@ It's a two-page project.
     - Entry point that shows basic data about all countries.
     - It has a filter form that filters country based on country's name or capital. [File Code](https://github.com/Olaleye-Blessing/countries/blob/main/components/Form/Form.jsx)
     - It also has a switch mode for light/dark mode. [File Code](https://github.com/Olaleye-Blessing/countries/blob/main/components/Navbar/Navbar.jsx)
-      [File Code](https://github.com/Olaleye-Blessing/countries/blob/main/pages/index.js)
+
+    [File Code](https://github.com/Olaleye-Blessing/countries/blob/main/pages/index.js)
 
 2. **Country**
-    - Shows information about a specific country.[Nigeria's info](https://countries-ruddy-seven.vercel.app/countries/NGA)
-    - [File Code](https://github.com/Olaleye-Blessing/countries/blob/main/pages/countries/%5Bcountry%5D.jsx)
+
+    - Shows information about a specific country **([Nigeria's info](https://countries-ruddy-seven.vercel.app/countries/NGA))**
+
+    [File Code](https://github.com/Olaleye-Blessing/countries/blob/main/pages/countries/%5Bcountry%5D.jsx)
 
 ## If I had more time, I would change this
 
