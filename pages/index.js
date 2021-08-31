@@ -35,7 +35,8 @@ export default function Home({ countries }) {
                 country.name.toLowerCase().includes(search) ||
                 country.capital.toLowerCase().includes(search) ||
                 country.region.toLowerCase().includes(search) ||
-                country.subregion.toLowerCase().includes(search)
+                country.subregion.toLowerCase().includes(search) ||
+                country.alpha3Code.toLowerCase().includes(search)
         );
     }
 
