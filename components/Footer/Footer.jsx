@@ -11,7 +11,7 @@ const Footer = () => {
         {
             icon: <FiTwitter />,
             styl: "footer__social-twitter",
-            link: `https://twitter.com/OlaleyeBlessin7`,
+            link: `https://twitter.com/OlaleyeBlessin`,
         },
         {
             icon: <FiLinkedin />,
