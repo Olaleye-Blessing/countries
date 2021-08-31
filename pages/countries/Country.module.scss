@@ -35,8 +35,9 @@
 
     &__region {
         font-size: 1.7rem;
-        margin-top: -0.3rem;
+        margin-top: -0.8rem;
         color: var(--gray);
+        font-weight: bold;
     }
 
     &__density {
@@ -47,6 +48,17 @@
     &__area {
         text-align: center;
         @include flex(column, center);
+
+        span {
+            &:first-child {
+                letter-spacing: 0.1rem;
+            }
+
+            &:nth-child(2) {
+                color: var(--gray);
+                font-weight: bold;
+            }
+        }
     }
 
     &__population {

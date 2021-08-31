@@ -9,29 +9,24 @@ const Table = ({ data, rows }) => {
     let sortedData = data;
 
     const sortData = () => {
-        let sorted;
-        switch (sorting.label) {
-            case "name":
-            case "capital":
-            case "alpha3Code":
-                sorted = data.sort((a, b) => {
-                    if (sorting.order === "asc") {
-                        if (a[sorting.label] < b[sorting.label]) return -1;
-                        if (a[sorting.label] > b[sorting.label]) return 1;
-                        return 0;
-                    } else {
-                        if (a[sorting.label] > b[sorting.label]) return -1;
-                        if (a[sorting.label] < b[sorting.label]) return 1;
-                        return 0;
-                    }
-                });
-            case "population":
-                sorted = data.sort((a, b) => {
-                    return sorting.order === "asc"
-                        ? a[sorting.label] - b[sorting.label]
-                        : b[sorting.label] - a[sorting.label];
-                });
-        }
+        let sorted = data.sort((a, b) => {
+            if (sorting.order === "asc") {
+                // ascending
+                return a[sorting.label] < b[sorting.label]
+                    ? -1
+                    : a[sorting.label] > b[sorting.label]
+                    ? 1
+                    : 0;
+            } else {
+                //descending
+                return a[sorting.label] > b[sorting.label]
+                    ? -1
+                    : a[sorting.label] < b[sorting.label]
+                    ? 1
+                    : 0;
+            }
+        });
+
         return sorted;
     };
 
