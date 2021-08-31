@@ -56,8 +56,7 @@
     &__main {
         flex: 1 1 40rem;
         padding: 0;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
+        padding-top: 0.4rem;
 
         h3 {
             font-size: 1.9rem;
@@ -66,29 +65,35 @@
             padding-right: 0.9rem;
         }
 
-        & > *:not(:last-child) {
+        & > * {
             @include flex(row, space-between);
             border-bottom: 0.1rem solid var(--bgColor);
             padding: 1rem 0.9rem 1.2rem;
+
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 
     &__borders {
+        // remove flex display and borders
+        display: block;
+
+        padding: 0 0.9rem;
         margin-top: 1rem;
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
 
         h4 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         & > div {
-            @include flex(row, space-around);
-            gap: 2rem;
+            @include flex(row, center);
 
             & > * {
                 flex: 1 1 7rem;
-                max-width: 10rem;
+                max-width: 7rem;
+                margin: 1.5rem 1.4rem;
             }
         }
 

@@ -79,41 +79,43 @@ const CountryDetail = ({ country }) => {
                         <span>Native name</span>
                         <span>{nativeName}</span>
                     </p>
-                    <div className={`${countryStyle.country__borders}`}>
-                        <h4>Neighbouring Countries</h4>
-                        <div>
-                            {borders.map((border) => {
-                                return (
-                                    <Link
-                                        key={border}
-                                        href={`/countries/${border}`}
-                                    >
-                                        <a
-                                            className={`${countryStyle["country__borders-link"]} btn`}
+                    {borders.length > 0 && (
+                        <div className={`${countryStyle.country__borders}`}>
+                            <h4>Neighbouring Countries</h4>
+                            <div>
+                                {borders.map((border) => {
+                                    return (
+                                        <Link
+                                            key={border}
+                                            href={`/countries/${border}`}
                                         >
-                                            <figure>
-                                                <Image
-                                                    src={`https://restcountries.eu/data/${border.toLowerCase()}.svg`}
-                                                    alt="flag"
-                                                    width={100}
-                                                    height={70}
-                                                    layout="responsive"
-                                                />
-                                            </figure>
-                                            <div
-                                                style={{
-                                                    textAlign: "center",
-                                                    marginTop: "5px",
-                                                }}
+                                            <a
+                                                className={`${countryStyle["country__borders-link"]} btn`}
                                             >
-                                                {border}
-                                            </div>
-                                        </a>
-                                    </Link>
-                                );
-                            })}
+                                                <figure>
+                                                    <Image
+                                                        src={`https://restcountries.eu/data/${border.toLowerCase()}.svg`}
+                                                        alt="flag"
+                                                        width={100}
+                                                        height={70}
+                                                        layout="responsive"
+                                                    />
+                                                </figure>
+                                                <div
+                                                    style={{
+                                                        textAlign: "center",
+                                                        marginTop: "5px",
+                                                    }}
+                                                >
+                                                    {border}
+                                                </div>
+                                            </a>
+                                        </Link>
+                                    );
+                                })}
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </section>
             </main>
         </>

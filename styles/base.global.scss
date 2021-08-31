@@ -25,14 +25,15 @@
 
     --box-bg: #dcdcdc;
 }
-:root.white-mode {
-    --bgColor: hsl(0, 0%, 98%);
-    --color: hsl(200, 15%, 8%);
-    --element: hsl(0, 0%, 100%);
-    --input: hsl(0, 0%, 52%);
-    --scroll-bg: hsl(209, 23%, 22%);
-    --thumb-bg: hsl(0, 0%, 52%);
-}
+
+// :root.white-mode {
+//     --bgColor: hsl(0, 0%, 98%);
+//     --color: hsl(200, 15%, 8%);
+//     --element: hsl(0, 0%, 100%);
+//     --input: hsl(0, 0%, 52%);
+//     --scroll-bg: hsl(209, 23%, 22%);
+//     --thumb-bg: hsl(0, 0%, 52%);
+// }
 
 @import "./mixins";
 
